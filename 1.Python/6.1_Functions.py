@@ -27,4 +27,3 @@ company_info(Iphone="100 Billion",Samsung="200 Billion",Tesla="300 Billion")
 
 x = lambda a:a*a
 print(x(5))
-
