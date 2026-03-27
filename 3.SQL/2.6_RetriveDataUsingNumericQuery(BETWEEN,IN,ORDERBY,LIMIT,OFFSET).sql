@@ -1,0 +1,12 @@
+SELECT * FROM moviesdb.movies;
+SELECT * FROM moviesdb.movies WHERE imdb_rating >=9;
+SELECT * FROM moviesdb.movies WHERE imdb_rating>6 AND imdb_rating<8;
+SELECT * FROM moviesdb.movies WHERE imdb_rating BETWEEN 6 AND 8;
+SELECT * FROM moviesdb.movies WHERE release_year=2022 OR  release_year=2019 OR  release_year=2018;
+SELECT * FROM moviesdb.movies WHERE release_year IN(2022,2019,2018);
+SELECT * FROM moviesdb.movies WHERE studio IN("Marvel STUDIOS","ZEE STUDIOS");
+SELECT * FROM moviesdb.movies WHERE imdb_rating IS NULL;
+SELECT * FROM moviesdb.movies WHERE industry="Bollywood" order by imdb_rating;
+SELECT * FROM moviesdb.movies WHERE industry="Bollywood" order by imdb_rating desc;
+SELECT * FROM moviesdb.movies WHERE industry="Bollywood" order by imdb_rating desc LIMIT 5;
+SELECT * FROM moviesdb.movies WHERE industry="Bollywood" order by imdb_rating desc LIMIT 5 OFFSET 1;
