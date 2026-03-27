@@ -1,0 +1,11 @@
+SELECT COUNT(*) FROM moviesdb.movies WHERE industry = "Bollywood";
+SELECT MAX(imdb_rating) FROM moviesdb.movies WHERE industry = "Bollywood";
+SELECT MIN(imdb_rating) FROM moviesdb.movies WHERE industry = "Bollywood";
+SELECT AVG(imdb_rating) FROM moviesdb.movies WHERE studio = "Marvel Studios";
+SELECT ROUND(AVG(imdb_rating),2) FROM moviesdb.movies WHERE studio = "Marvel Studios";
+SELECT ROUND(AVG(imdb_rating),2) as avg_rating FROM moviesdb.movies WHERE studio = "Marvel Studios";
+SELECT MIN(imdb_rating) as min_rating ,MAX(imdb_rating)as max_rating , ROUND(AVG(imdb_rating),2) as avg_rating FROM moviesdb.movies WHERE studio = "Marvel Studios";
+SELECT industry,COUNT(*) FROM moviesdb.movies GROUP BY industry;
+SELECT studio,COUNT(*) as cnt FROM moviesdb.movies GROUP BY studio order by cnt desc ;
+SELECT industry,COUNT(*) as cnt ,AVG(imdb_rating) as avg_rating FROM moviesdb.movies GROUP BY industry;
+SELECT studio,COUNT(studio) as cnt ,ROUND(AVG(imdb_rating),1) as avg_rating FROM moviesdb.movies GROUP BY studio order by avg_rating DESC;
