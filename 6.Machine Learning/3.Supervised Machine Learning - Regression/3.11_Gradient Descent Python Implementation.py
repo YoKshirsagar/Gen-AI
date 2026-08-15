@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-
 # Expected answer. m = 0.05168176, b=18.0465
 
 def gradient_descent(x, y, lr=0.1, epochs=3000):
